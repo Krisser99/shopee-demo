@@ -1,0 +1,234 @@
+:root{
+    --heaer-height: 125px;
+    --sort-bar-height: 46px; 
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color: #f7442e;
+    --back-ground-hover-color: #fafafa;
+    --text-color: rgba(0, 0, 0, 0.9);
+    --footer-color-text:rgba(0,0,0,0.7);
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html {
+    /* HACK */
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+
+/* Animation */
+
+
+/* QR code */
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* Notify */
+@keyframes notifyShow {
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Animation growth */
+@keyframes growth {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+
+
+/* Modal */
+
+.Modal{
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: fadeIn linear 0.1s;
+}
+
+.Modal__overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.Modal__body{
+    background-color: var(--white-color);
+    border-radius: 5px;
+    margin: auto;
+    z-index: 1;
+    overflow: hidden;
+    animation: growth linear 0.1s;
+}
+
+/* Button style */
+
+.btn{
+    min-width: 142px;
+    height: 36px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0;
+}
+
+.btn-sort-bar{
+    color: var(--black-color);
+    background-color: var(--white-color);
+    min-width: 90px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    padding: 0;
+    font-size: 1.4rem;
+    box-shadow:  1px 1px 0 rgb(0 0 0 / 2%);
+}
+
+.btn-sort-bar-controller{
+    color: var(--black-color);
+    background-color: var(--white-color);
+    min-width: 36px;
+    height: 34px;
+    text-decoration: none;
+    border-left: 1px solid #eee;
+    border-radius: 2px;
+    padding: 0;
+    font-size: 1.4rem;
+    box-shadow:  1px 1px 0 rgb(0 0 0 / 2%);
+}
+
+.btn-sort-bar-controller-disable{
+    color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
+    min-width: 36px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    padding: 0;
+    font-size: 1.4rem;
+    box-shadow:  1px 1px 0 rgb(0 0 0 / 2%);
+    cursor: default;
+}
+
+.btn-sort-bar:hover,
+.btn-sort-bar-controller:hover{
+    background-color: #fafafa;
+    cursor: pointer;
+}
+
+.btn-sort-bar-primary{
+    color: var(--white-color);
+    background-color: #ee4d2d;
+    min-width: 90px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    padding: 0;
+    font-size: 1.4rem;
+    box-shadow:  1px 1px 0 rgb(0 0 0 / 2%);
+    cursor: pointer;
+}
+
+
+/* Hover color */
+
+.color-hover{
+    background-color: rgba(184, 182, 182, 0.4);
+}
+
+/* margin body*/
+
+.mg-t10{
+    margin-top: 10px;
+}
+
+/* padding top */
+
+.pd-t9{
+    padding-top: 9px;
+}
+
+/* Gia goc */
+
+.price-original{
+    color: rgba(0,0,0,.54)!important;
+    margin-right: 5px;
+    text-decoration: line-through;
+}
+
+.product__information-title-special-deal{
+    font-size: 1rem;
+    padding: 2px 4px;
+    color: #f2745b;
+    border: 1px solid;
+}
+
+/* pagination */
+
+.pagination{
+    margin: 48px 0 32px;
+}
+
+.pagination__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+}
+
+.pagination__item{
+    margin: 0 15px;
+}
+
+.pagination__item-link{
+    display: block;
+    --height: 30px;
+    min-width: 40px;
+    height: var(--height);
+    font-size: 2rem;
+    line-height: var(--height);
+    text-decoration: none;
+    color: #9f9fa0;
+    text-align: center;
+    border-radius: 2px;
+}
+
+.pagination__item-link--active{
+    color: var(--white-color);
+    background-color: #ee4d2d;
+}
+
+.pagination__item-link--active:hover{
+    opacity: 0.8;
+}
